@@ -1,0 +1,502 @@
+/* =========================================
+   DESIGN SYSTEM - ONG PROJETO SOCIAL
+   ========================================= */
+
+:root {
+
+    /* Cores */
+    --cor-primaria: #155e75;
+    --cor-primaria-escura: #0f3e4f;
+    --cor-secundaria: #2e7d32;
+    --cor-secundaria-clara: #e8f5e9;
+    --cor-destaque: #f4b942;
+
+    --cor-fundo: #f7fafc;
+    --cor-superficie: #ffffff;
+    --cor-texto: #1f2937;
+    --cor-texto-secundario: #5b6472;
+    --cor-borda: #d1d5db;
+
+    --cor-sucesso: #2e7d32;
+    --cor-erro: #b42318;
+    --cor-aviso: #b7791f;
+
+    /* Tipografia */
+    --fonte-principal: Arial, Helvetica, sans-serif;
+
+    --texto-xs: 0.875rem;
+    --texto-sm: 1rem;
+    --texto-md: 1.25rem;
+    --texto-lg: 1.5rem;
+    --texto-xl: 2rem;
+
+    /* Espaçamentos */
+    --espaco-1: 0.25rem;
+    --espaco-2: 0.5rem;
+    --espaco-3: 1rem;
+    --espaco-4: 1.5rem;
+    --espaco-5: 2rem;
+    --espaco-6: 3rem;
+
+    /* Outros */
+    --raio: 0.5rem;
+}
+
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-principal);
+    font-size: var(--texto-sm);
+    line-height: 1.6;
+
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--raio);
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   TIPOGRAFIA
+   ========================================= */
+
+h1 {
+    font-size: var(--texto-xl);
+}
+
+h2 {
+    font-size: var(--texto-lg);
+}
+
+h3 {
+    font-size: var(--texto-md);
+}
+
+p {
+    font-size: var(--texto-sm);
+}
+
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-superficie);
+    padding: var(--espaco-3);
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+/* =========================================
+   FLEXBOX - NAVEGAÇÃO
+   ========================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-3);
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cor-superficie);
+    padding: var(--espaco-2);
+    border-radius: var(--raio);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--cor-primaria-escura);
+    text-decoration: none;
+}
+
+
+/* =========================================
+   GRID DE 12 COLUNAS
+   ========================================= */
+
+main {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-4);
+
+    padding-block: var(--espaco-5);
+}
+
+section,
+form {
+    grid-column: span 12;
+}
+
+
+/* =========================================
+   SEÇÕES / CARDS
+   ========================================= */
+
+section {
+    background-color: var(--cor-superficie);
+    padding: var(--espaco-4);
+    border-radius: var(--raio);
+    border: 1px solid var(--cor-borda);
+}
+
+article {
+    padding: var(--espaco-3);
+    margin-bottom: var(--espaco-3);
+
+    background-color: var(--cor-fundo);
+    border-radius: var(--raio);
+    border: 1px solid var(--cor-borda);
+}
+
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+button,
+.botao {
+    display: inline-block;
+
+    border: none;
+    border-radius: var(--raio);
+
+    padding: 0.75rem 1.25rem;
+
+    background-color: var(--cor-primaria);
+    color: var(--cor-superficie);
+
+    font-size: var(--texto-sm);
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease,
+        opacity 0.3s ease;
+}
+
+button:hover,
+.botao:hover {
+    background-color: var(--cor-primaria-escura);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+button:focus,
+.botao:focus {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 3px;
+}
+
+button:active,
+.botao:active {
+    transform: scale(0.97);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+   ========================================= */
+
+form {
+    background-color: var(--cor-superficie);
+    padding: var(--espaco-4);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+}
+
+fieldset {
+    margin-bottom: var(--espaco-4);
+
+    padding: var(--espaco-3);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+}
+
+legend {
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+label {
+    display: block;
+
+    margin-bottom: var(--espaco-1);
+
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 0.75rem;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+
+    font: inherit;
+
+    background-color: var(--cor-superficie);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--cor-primaria);
+
+    outline: none;
+
+    box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.15);
+}
+
+
+/* Campo preenchido corretamente */
+
+input:valid {
+    border-color: var(--cor-sucesso);
+}
+
+
+/* Campo inválido durante o preenchimento */
+
+input:focus:invalid {
+    border-color: var(--cor-erro);
+}
+
+
+/* =========================================
+   BADGES
+   ========================================= */
+
+.badge {
+    display: inline-block;
+
+    padding: var(--espaco-1) var(--espaco-2);
+
+    border-radius: 999px;
+
+    font-size: var(--texto-xs);
+    font-weight: bold;
+}
+
+.badge-sucesso {
+    color: var(--cor-sucesso);
+    background-color: var(--cor-secundaria-clara);
+}
+
+.badge-destaque {
+    color: var(--cor-texto);
+    background-color: var(--cor-destaque);
+}
+
+
+/* =========================================
+   ALERTAS
+   ========================================= */
+
+.alerta {
+    padding: var(--espaco-3);
+    margin-block: var(--espaco-3);
+
+    border-radius: var(--raio);
+    border-left: 5px solid;
+}
+
+.alerta-sucesso {
+    color: var(--cor-sucesso);
+    background-color: var(--cor-secundaria-clara);
+    border-color: var(--cor-sucesso);
+}
+
+.alerta-erro {
+    color: var(--cor-erro);
+    background-color: #fff1f0;
+    border-color: var(--cor-erro);
+}
+
+
+/* =========================================
+   MODAL
+   ========================================= */
+
+dialog {
+    max-width: 500px;
+
+    padding: var(--espaco-4);
+
+    border: none;
+    border-radius: var(--raio);
+
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================
+   TOAST
+   ========================================= */
+
+.toast {
+    padding: var(--espaco-3);
+
+    border-radius: var(--raio);
+
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-superficie);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--espaco-4);
+
+    text-align: center;
+
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-superficie);
+}
+
+
+/* =========================================
+   BREAKPOINT 1 - 480px
+   ========================================= */
+
+@media (min-width: 480px) {
+
+    main {
+        gap: var(--espaco-4);
+    }
+}
+
+
+/* =========================================
+   BREAKPOINT 2 - 768px
+   ========================================= */
+
+@media (min-width: 768px) {
+
+    main {
+        gap: var(--espaco-5);
+    }
+
+    .metade {
+        grid-column: span 6;
+    }
+}
+
+
+/* =========================================
+   BREAKPOINT 3 - 1024px
+   ========================================= */
+
+@media (min-width: 1024px) {
+
+    .terco {
+        grid-column: span 4;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-inline: var(--espaco-5);
+    }
+}
+
+
+/* =========================================
+   BREAKPOINT 4 - 1280px
+   ========================================= */
+
+@media (min-width: 1280px) {
+
+    main {
+        max-width: 1200px;
+    }
+
+    .quarto {
+        grid-column: span 3;
+    }
+}
+
+
+/* =========================================
+   BREAKPOINT 5 - 1440px
+   ========================================= */
+
+@media (min-width: 1440px) {
+
+    main {
+        max-width: 1320px;
+    }
+
+    body {
+        font-size: 1.05rem;
+    }
+}
