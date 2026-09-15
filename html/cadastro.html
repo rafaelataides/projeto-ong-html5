@@ -2,17 +2,26 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cadastro - ONG Projeto Social</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>
+        Cadastro - ONG Projeto Social
+    </title>
+
+    <link rel="stylesheet"
+          href="../css/styles.css">
+
 </head>
+
 
 <body>
 
     <header>
+
         <h1>ONG Projeto Social</h1>
 
         <nav>
@@ -20,55 +29,89 @@
             <a href="projetos.html">Projetos</a>
             <a href="cadastro.html">Cadastro</a>
         </nav>
+
     </header>
+
 
     <main>
 
         <section>
-            <h2>Cadastro de voluntários e colaboradores</h2>
+
+            <span class="badge badge-sucesso">
+                Inscrições abertas
+            </span>
+
+            <h2>
+                Cadastro de voluntários
+                e colaboradores
+            </h2>
 
             <picture>
+
                 <source
                     srcset="../imagens/cadastro.webp"
                     type="image/webp">
 
                 <img
                     src="../imagens/cadastro.png"
-                    alt="Equipe de voluntários utilizando um computador para realizar cadastros">
+                    alt="Equipe de voluntários utilizando um computador">
+
             </picture>
 
             <p>
-                Preencha o formulário abaixo para demonstrar interesse
-                em participar das ações, projetos e atividades da ONG.
+                Preencha o formulário para
+                demonstrar interesse em participar
+                das ações e projetos da ONG.
             </p>
+
         </section>
 
-        <form action="#" method="post">
+
+        <form id="form-cadastro">
 
             <fieldset>
 
-                <legend>Dados pessoais</legend>
+                <legend>
+                    Dados pessoais
+                </legend>
+
 
                 <p>
-                    <label for="nome">Nome completo:</label>
+
+                    <label for="nome">
+                        Nome completo:
+                    </label>
+
                     <input
                         type="text"
                         id="nome"
                         name="nome"
                         required>
+
                 </p>
 
+
                 <p>
-                    <label for="nascimento">Data de nascimento:</label>
+
+                    <label for="nascimento">
+                        Data de nascimento:
+                    </label>
+
                     <input
                         type="date"
                         id="nascimento"
                         name="nascimento"
                         required>
+
                 </p>
 
+
                 <p>
-                    <label for="cpf">CPF:</label>
+
+                    <label for="cpf">
+                        CPF:
+                    </label>
+
                     <input
                         type="text"
                         id="cpf"
@@ -77,26 +120,41 @@
                         pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
                         title="Digite o CPF no formato 000.000.000-00"
                         required>
+
                 </p>
 
             </fieldset>
 
+
             <fieldset>
 
-                <legend>Dados de contato</legend>
+                <legend>
+                    Dados de contato
+                </legend>
+
 
                 <p>
-                    <label for="email">E-mail:</label>
+
+                    <label for="email">
+                        E-mail:
+                    </label>
+
                     <input
                         type="email"
                         id="email"
                         name="email"
                         placeholder="exemplo@email.com"
                         required>
+
                 </p>
 
+
                 <p>
-                    <label for="telefone">Telefone:</label>
+
+                    <label for="telefone">
+                        Telefone:
+                    </label>
+
                     <input
                         type="tel"
                         id="telefone"
@@ -105,51 +163,91 @@
                         pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
                         title="Digite o telefone no formato (11) 99999-9999"
                         required>
+
                 </p>
 
             </fieldset>
 
+
             <fieldset>
 
-                <legend>Endereço</legend>
+                <legend>
+                    Endereço
+                </legend>
+
 
                 <p>
-                    <label for="endereco">Endereço:</label>
+
+                    <label for="endereco">
+                        Endereço:
+                    </label>
+
                     <input
                         type="text"
                         id="endereco"
                         name="endereco"
                         required>
+
                 </p>
 
+
                 <p>
-                    <label for="cidade">Cidade:</label>
+
+                    <label for="cidade">
+                        Cidade:
+                    </label>
+
                     <input
                         type="text"
                         id="cidade"
                         name="cidade"
                         required>
+
                 </p>
 
+
                 <p>
-                    <label for="estado">Estado:</label>
+
+                    <label for="estado">
+                        Estado:
+                    </label>
 
                     <select
                         id="estado"
                         name="estado"
                         required>
 
-                        <option value="">Selecione</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="ES">Espírito Santo</option>
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="SP">
+                            São Paulo
+                        </option>
+
+                        <option value="RJ">
+                            Rio de Janeiro
+                        </option>
+
+                        <option value="MG">
+                            Minas Gerais
+                        </option>
+
+                        <option value="ES">
+                            Espírito Santo
+                        </option>
 
                     </select>
+
                 </p>
 
+
                 <p>
-                    <label for="cep">CEP:</label>
+
+                    <label for="cep">
+                        CEP:
+                    </label>
+
                     <input
                         type="text"
                         id="cep"
@@ -158,9 +256,25 @@
                         pattern="\d{5}-\d{3}"
                         title="Digite o CEP no formato 00000-000"
                         required>
+
                 </p>
 
             </fieldset>
+
+
+            <p>
+
+                <button
+                    type="button"
+                    id="abrir-modal"
+                    class="botao-secundario">
+
+                    Como meus dados serão utilizados?
+
+                </button>
+
+            </p>
+
 
             <button type="submit">
                 Enviar cadastro
@@ -170,11 +284,166 @@
 
     </main>
 
-    <footer>
+
+    <!-- MODAL -->
+
+    <dialog
+        id="modal-privacidade"
+        class="modal-feedback"
+        aria-labelledby="titulo-modal">
+
+        <h2 id="titulo-modal">
+            Uso dos dados
+        </h2>
+
         <p>
-            © 2026 ONG Projeto Social - Todos os direitos reservados.
+            As informações fornecidas neste
+            formulário serão utilizadas apenas
+            para contato relacionado às ações,
+            campanhas e oportunidades de
+            voluntariado da ONG.
         </p>
+
+        <p>
+            Os dados devem ser tratados com
+            responsabilidade, respeitando
+            princípios de privacidade e
+            finalidade.
+        </p>
+
+        <div class="modal-acoes">
+
+            <button
+                type="button"
+                id="fechar-modal">
+
+                Entendi
+
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- TOAST -->
+
+    <div
+        id="toast-sucesso"
+        class="toast-feedback"
+        role="status"
+        aria-live="polite"
+        hidden>
+
+        ✓ Cadastro enviado com sucesso!
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 ONG Projeto Social -
+            Todos os direitos reservados.
+        </p>
+
     </footer>
+
+
+    <script>
+
+        const modal =
+            document.getElementById(
+                "modal-privacidade"
+            );
+
+        const botaoAbrir =
+            document.getElementById(
+                "abrir-modal"
+            );
+
+        const botaoFechar =
+            document.getElementById(
+                "fechar-modal"
+            );
+
+        const formulario =
+            document.getElementById(
+                "form-cadastro"
+            );
+
+        const toast =
+            document.getElementById(
+                "toast-sucesso"
+            );
+
+
+        botaoAbrir.addEventListener(
+            "click",
+            function () {
+
+                modal.showModal();
+
+            }
+        );
+
+
+        botaoFechar.addEventListener(
+            "click",
+            function () {
+
+                modal.close();
+
+            }
+        );
+
+
+        formulario.addEventListener(
+            "submit",
+            function (evento) {
+
+                evento.preventDefault();
+
+                toast.hidden = false;
+
+                requestAnimationFrame(
+                    function () {
+
+                        toast.classList.add(
+                            "toast-visivel"
+                        );
+
+                    }
+                );
+
+
+                setTimeout(
+                    function () {
+
+                        toast.classList.remove(
+                            "toast-visivel"
+                        );
+
+                        setTimeout(
+                            function () {
+
+                                toast.hidden = true;
+
+                            },
+                            300
+                        );
+
+                    },
+                    10000
+                );
+
+
+                formulario.reset();
+
+            }
+        );
+
+    </script>
 
 </body>
 
