@@ -2,17 +2,26 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projetos - ONG Projeto Social</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>
+        Projetos - ONG Projeto Social
+    </title>
+
+    <link rel="stylesheet"
+          href="../css/styles.css">
+
 </head>
+
 
 <body>
 
     <header>
+
         <h1>ONG Projeto Social</h1>
 
         <nav>
@@ -20,14 +29,18 @@
             <a href="projetos.html">Projetos</a>
             <a href="cadastro.html">Cadastro</a>
         </nav>
+
     </header>
+
 
     <main>
 
         <section>
+
             <h2>Nossos projetos sociais</h2>
 
             <picture>
+
                 <source
                     srcset="../imagens/projetos.webp"
                     type="image/webp">
@@ -35,88 +48,169 @@
                 <img
                     src="../imagens/projetos.png"
                     alt="Voluntários participando de uma ação social na comunidade">
+
             </picture>
 
             <p>
-                A ONG Projeto Social desenvolve ações voltadas para
-                inclusão, educação, solidariedade e apoio às comunidades.
-                Nossos projetos buscam aproximar voluntários e pessoas
-                que desejam contribuir para transformar vidas.
+                A ONG Projeto Social desenvolve ações
+                voltadas para inclusão, educação,
+                solidariedade e apoio às comunidades.
             </p>
+
         </section>
 
+
+        <div
+            class="alerta alerta-sucesso"
+            role="status">
+
+            <strong>Campanha ativa!</strong>
+
+            Estamos recebendo doações de alimentos
+            e materiais escolares para nossas
+            ações comunitárias.
+
+        </div>
+
+
+        <div
+            class="alerta alerta-aviso"
+            role="alert">
+
+            <strong>Necessidade prioritária</strong>
+
+            Neste momento, materiais escolares
+            estão entre os itens mais importantes
+            para as próximas ações.
+
+        </div>
+
+
         <section>
+
             <h2>Doações</h2>
 
             <p>
-                As doações ajudam a manter nossos projetos e permitem
-                ampliar o atendimento às pessoas e famílias beneficiadas
-                pelas ações da ONG.
+                As doações ajudam a manter nossos
+                projetos e permitem ampliar o
+                atendimento às famílias beneficiadas.
             </p>
 
             <p>
-                É possível contribuir com alimentos, roupas, materiais
-                escolares ou doações financeiras.
+                É possível contribuir com alimentos,
+                roupas, materiais escolares ou
+                doações financeiras.
             </p>
 
-            <a href="cadastro.html">Quero contribuir</a>
+            <a
+                href="cadastro.html"
+                class="botao">
+                Quero contribuir
+            </a>
+
         </section>
 
+
         <section>
+
             <h2>Voluntariado</h2>
 
             <p>
-                Pessoas interessadas podem participar das ações da ONG
-                como voluntárias em campanhas, eventos, atividades
-                educativas e projetos de apoio à comunidade.
+                Pessoas interessadas podem participar
+                das ações da ONG como voluntárias
+                em campanhas, eventos e atividades
+                educativas.
             </p>
 
-            <p>
-                Para participar, basta realizar o cadastro e informar
-                seu interesse em colaborar.
-            </p>
+            <a
+                href="cadastro.html"
+                class="botao">
+                Quero ser voluntário
+            </a>
 
-            <a href="cadastro.html">Quero ser voluntário</a>
         </section>
 
+
         <section>
+
             <h2>Campanhas e ações</h2>
 
-            <article>
-                <h3>Campanha de arrecadação de alimentos</h3>
+            <div class="cards-campanhas">
 
-                <p>
-                    A campanha arrecada alimentos não perecíveis para
-                    famílias em situação de vulnerabilidade social.
-                </p>
-            </article>
 
-            <article>
-                <h3>Campanha de materiais escolares</h3>
+                <article class="card-projeto">
 
-                <p>
-                    A ação busca arrecadar cadernos, lápis, mochilas e
-                    outros materiais para crianças e adolescentes.
-                </p>
-            </article>
+                    <span class="badge badge-sucesso">
+                        Ativa
+                    </span>
 
-            <article>
-                <h3>Ações de apoio comunitário</h3>
+                    <h3>
+                        Campanha de arrecadação
+                        de alimentos
+                    </h3>
 
-                <p>
-                    Também realizamos atividades educativas e ações de
-                    integração que fortalecem os vínculos entre
-                    voluntários e comunidade.
-                </p>
-            </article>
+                    <p>
+                        Arrecadação de alimentos
+                        não perecíveis para famílias
+                        em situação de vulnerabilidade.
+                    </p>
+
+                </article>
+
+
+                <article class="card-projeto">
+
+                    <span class="badge badge-aviso">
+                        Prioridade
+                    </span>
+
+                    <h3>
+                        Campanha de materiais
+                        escolares
+                    </h3>
+
+                    <p>
+                        Arrecadação de cadernos,
+                        lápis, mochilas e outros
+                        materiais escolares.
+                    </p>
+
+                </article>
+
+
+                <article class="card-projeto">
+
+                    <span class="badge badge-destaque">
+                        Contínua
+                    </span>
+
+                    <h3>
+                        Ações de apoio comunitário
+                    </h3>
+
+                    <p>
+                        Atividades educativas e ações
+                        de integração entre voluntários
+                        e comunidade.
+                    </p>
+
+                </article>
+
+
+            </div>
+
         </section>
 
     </main>
 
+
     <footer>
+
         <p>
-            © 2026 ONG Projeto Social - Todos os direitos reservados.
+            © 2026 ONG Projeto Social -
+            Todos os direitos reservados.
         </p>
+
     </footer>
 
 </body>
