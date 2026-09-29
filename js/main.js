@@ -78,6 +78,14 @@ function preencherDadosSalvos() {
     }
 }
 
+function focarConteudoPrincipal() {
+    const conteudoPrincipal =
+        document.getElementById("app");
+
+    if (conteudoPrincipal) {
+        conteudoPrincipal.focus();
+    }
+}
 
 function configurarPagina() {
 
@@ -191,6 +199,8 @@ window.addEventListener(
         renderizarPagina();
 
         configurarPagina();
+
+        focarConteudoPrincipal();
 
     }
 );
