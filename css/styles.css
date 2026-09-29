@@ -644,3 +644,25 @@ footer {
     }
 
 }
+
+/* =========================================
+   VALIDAÇÃO JAVASCRIPT
+   ========================================= */
+
+.campo-erro {
+    border-color: var(--cor-erro);
+}
+
+.campo-sucesso {
+    border-color: var(--cor-sucesso);
+}
+
+.mensagem-erro {
+    display: block;
+
+    margin-top: 0.25rem;
+
+    color: var(--cor-erro);
+
+    font-size: var(--texto-xs);
+}
